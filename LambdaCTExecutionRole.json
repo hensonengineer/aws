@@ -1,0 +1,30 @@
+{
+ "document": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Action": [
+              "cloudtrail:DescribeTrails",
+              "cloudtrail:GetTrailStatus",
+              "cloudtrail:StartLogging"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+          },
+          {
+            "Effect": "Allow",
+            "Action": [
+              "logs:CreateLogGroup",
+              "logs:CreateLogStream",
+              "logs:PutLogEvents"
+            ],
+            "Resource": [
+              "*"
+            ]
+          }
+        ]
+      },
+      "name": "oneClick_lambda_basic_execution_1516830124650",
+      "type": "inline"
+    }
+}
