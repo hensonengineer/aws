@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PermissionTogetUserandKeyData",
+            "Effect": "Allow",
+            "Action": [
+                "iam:PassRole",
+                "iam:GetUser",
+                "iam:GetUserPolicy",
+                "iam:GetAccessKeyLastUsed",
+                "iam:ListAccessKeys",
+                "iam:ListUsers",
+                "sns:Publish",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
