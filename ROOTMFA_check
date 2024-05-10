@@ -1,0 +1,10 @@
+## Check ROOT Account MFA ##
+
+MFA_ENABLED=$(aws iam get-account-summary --query 'SummaryMap.AccountMFAEnabled')
+ACCOUNT_NUMBER=$(aws sts get-caller-identity --query 'Account')
+
+if [ "$MFA_ENABLED" -eq 1 ]; then
+    echo "Root MFA is enabled for AWS account $ACCOUNT_NUMBER"
+else
+    echo "Root MFA is not enabled for AWS account $ACCOUNT_NUMBER"
+fi
