@@ -1,0 +1,13 @@
+### Event Bridge for GD EC2 Events ###
+# this filter has known Gaurd Duty EC2 alerts excluding Recon
+
+{
+  "source": ["aws.guardduty"],
+  "detail-type": ["GuardDuty Finding"],
+  "detail": {
+    "resource": {
+      "resourceType": ["Instance"]
+    },
+    "type": ["Backdoor:EC2/C&CActivity.B", "Backdoor:EC2/C&CActivity.B!DNS", "Backdoor:EC2/DenialOfService.Dns", "Backdoor:EC2/DenialOfService.Tcp", "Backdoor:EC2/DenialOfService.Udp", "Backdoor:EC2/DenialOfService.UdpOnTcpPorts", "Backdoor:EC2/DenialOfService.UnusualProtocol", "Backdoor:EC2/Spambot", "Behavior:EC2/NetworkPortUnusual", "Behavior:EC2/TrafficVolumeUnusual", "CryptoCurrency:EC2/BitcoinTool.B", "CryptoCurrency:EC2/BitcoinTool.B!DNS", "DefenseEvasion:EC2/UnusualDNSResolver", "DefenseEvasion:EC2/UnusualDoHActivity", "DefenseEvasion:EC2/UnusualDoTActivity", "Impact:EC2/AbusedDomainRequest.Reputation", "Impact:EC2/BitcoinDomainRequest.Reputation", "Impact:EC2/MaliciousDomainRequest.Reputation", "Impact:EC2/PortSweep", "Impact:EC2/SuspiciousDomainRequest.Reputation", "Impact:EC2/WinRMBruteForce", "Trojan:EC2/BlackholeTraffic", "Trojan:EC2/BlackholeTraffic!DNS", "Trojan:EC2/DGADomainRequest.B", "Trojan:EC2/DGADomainRequest.C!DNS", "Trojan:EC2/DNSDataExfiltration", "Trojan:EC2/DriveBySourceTraffic!DNS", "Trojan:EC2/DropPoint", "Trojan:EC2/DropPoint!DNS", "Trojan:EC2/PhishingDomainRequest!DNS", "UnauthorizedAccess:EC2/MaliciousIPCaller.Custom", "UnauthorizedAccess:EC2/MetadataDNSRebind", "UnauthorizedAccess:EC2/RDPBruteForce", "UnauthorizedAccess:EC2/SSHBruteForce", "UnauthorizedAccess:EC2/TorClient", "UnauthorizedAccess:EC2/TorRelay"]
+  }
+}
